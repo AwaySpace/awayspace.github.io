@@ -5,6 +5,7 @@
 
 body {
   display: flex;
+  position: relative;
   flex-direction: column;
   font-family: "Poppins", sans-serif;
 }
@@ -30,10 +31,27 @@ header nav.navbar .nav-container {
 }
 header nav.navbar .nav-container .logo-container .logo {
   color: var(--logo-color);
+  text-decoration: none;
 }
 header nav.navbar .nav-container ul.menubar {
   display: flex;
   flex-direction: row;
+}
+header nav.navbar .nav-container ul.menubar li {
+  list-style: none;
+}
+header nav.navbar .nav-container ul.menubar li a {
+  margin: 0 1px;
+  padding: 10px 15px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 200;
+  transition: border 0.5s;
+  border-bottom: 1px solid transparent;
+}
+header nav.navbar .nav-container ul.menubar li a:hover {
+  border-bottom: 1px solid #fff;
 }
 
 main {
@@ -48,4 +66,51 @@ main section {
 main section#announcements {
   background-color: #eeeeee;
   height: calc(100vh - 100px);
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.announcement {
+  width: 40%;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+.announcement h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+.announcement p {
+  margin-top: 10px;
+}
+.announcement .buttons-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.announcement .buttons-container a.button {
+  background-color: #240046;
+  padding: 20px 0;
+  width: 300px;
+  text-align: center;
+  color: #fff;
+  border-radius: 20px 0 0 20px;
+  text-decoration: none;
+}
+.announcement .buttons-container a.button + a.button {
+  background-color: #1b4332;
+  border-radius: 0 20px 20px 0;
+}
+
+footer {
+  position: relative;
+  flex-direction: column;
+  width: 100vw;
+  height: 500px;
+  background-color: #1a1a1a;
 }
